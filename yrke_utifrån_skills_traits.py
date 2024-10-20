@@ -11,8 +11,10 @@ def import_data(filename):
 
 def show_initial_information():
     st.title("Utifrån hårda och mjuka kompetenser")
-    initial_text = "Vill du starta om tryck cmd + r  \nTänk på att hur begrepp är kopplade till vissa yrkesbenämningar, särskilt inom IT, inte är representativt för hela arbetsmarknade."
+    initial_text = "Vill du starta om tryck cmd + r"
+    extra_text = "Tänk på att hur begrepp är kopplade till vissa yrkesbenämningar, särskilt inom IT, inte är representativt för hela arbetsmarknade."
     st.markdown(f"<p style='font-size:12px;'>{initial_text}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size:12px;'>{extra_text}</p>", unsafe_allow_html=True)
 
 def matcha_mot_yrken_och_visa_tio(selected, typ):
     yrken_med_värden = {}
