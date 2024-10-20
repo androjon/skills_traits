@@ -10,7 +10,7 @@ def import_data(filename):
     return output
 
 def show_initial_information():
-    st.title("Utifrån hårda och mjuka kompetenser")
+    st.title("Hårda och mjuka kompetenser")
     initial_text = "Vill du starta om tryck cmd + r"
     extra_text = "Tänk på att hur begrepp är kopplade till vissa yrkesbenämningar, särskilt inom IT, inte är representativt för hela arbetsmarknade."
     st.markdown(f"<p style='font-size:12px;'>{initial_text}</p>", unsafe_allow_html=True)
