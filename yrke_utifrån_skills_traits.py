@@ -10,8 +10,8 @@ def import_data(filename):
     return output
 
 def show_initial_information():
-    st.title("Skills och traits")
-    initial_text = "Vill du starta om tryck cmd + r"
+    st.title("Utifrån hårda och mjuka kompetenser")
+    initial_text = "Vill du starta om tryck cmd + r  \nTänk på att hur begrepp är kopplade till vissa yrkesbenämningar, särskilt inom IT, inte är representativt för hela arbetsmarknade."
     st.markdown(f"<p style='font-size:12px;'>{initial_text}</p>", unsafe_allow_html=True)
 
 def matcha_mot_yrken_och_visa_tio(selected, typ):
@@ -55,7 +55,7 @@ def choose_skills_traits():
     skills_or_traits = st.radio(
                 f"Hitta liknande yrken utifrån skills och traits. Välj om du vill utgå från skills (hårda kompetenser, arbetsuppgifter eller kunskaper) eller traits (mjuka kompetenser, förmågor eller egenskaper).",
                 ["skills", "traits"],
-                horizontal = True, index = 0,
+                horizontal = True, index = 1,
         )
 
     if skills_or_traits == "skills":
