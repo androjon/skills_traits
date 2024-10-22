@@ -16,11 +16,11 @@ def show_initial_information():
     st.markdown(f"<p style='font-size:12px;'>{initial_text}</p>", unsafe_allow_html=True)
     st.markdown(f"<p style='font-size:12px;'>{extra_text}</p>", unsafe_allow_html=True)
 
-@st.cache_data
 def hämta_hem_data():
-    st.session_state.occupations_skills_traits = import_data("skills_traits_topplistor.json")
-    st.session_state.alla_skills = import_data("valbara_skills.json")
-    st.session_state.alla_traits = import_data("valbara_traits.json")
+    if "occupations_skills_traits" not in st.session_state:
+        st.session_state.occupations_skills_traits = import_data("skills_traits_topplistor.json")
+        st.session_state.alla_skills = import_data("valbara_skills.json")
+        st.session_state.alla_traits = import_data("valbara_traits.json")
 
 def matcha_mot_yrken_och_visa_tio(selected, typ):
     yrken_med_värden = {}
