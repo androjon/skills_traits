@@ -54,7 +54,6 @@ def välj_traits():
         matcha_mot_yrken_och_visa_tio(selected_traits, "traits")
 
 def choose_skills_traits():
-    hämta_hem_data()
     
     skills_or_traits = st.radio(
                 f"Hitta liknande yrken utifrån skills och traits. Välj om du vill utgå från skills (hårda kompetenser, arbetsuppgifter eller kunskaper) eller traits (mjuka kompetenser, förmågor eller egenskaper).",
@@ -69,6 +68,7 @@ def choose_skills_traits():
         välj_traits()
 
 def main ():
+    hämta_hem_data()
     show_initial_information()
     choose_skills_traits()
 
