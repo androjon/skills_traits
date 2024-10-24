@@ -18,9 +18,9 @@ def show_initial_information():
 
 def hämta_hem_data():
     if "occupations_skills_traits" not in st.session_state:
-        st.session_state.occupations_skills_traits = import_data("skills_traits_topplistor.json")
-        st.session_state.alla_skills = import_data("valbara_skills.json")
-        st.session_state.alla_traits = import_data("valbara_traits.json")
+        st.session_state.occupations_skills_traits = import_data("skills_traits_topplistor_min_200.json")
+        st.session_state.alla_skills = import_data("valbara_skills_min_200.json")
+        st.session_state.alla_traits = import_data("valbara_traits_min_200.json")
 
 def matcha_mot_yrken_och_visa_tio(selected, typ):
     yrken_med_värden = {}
