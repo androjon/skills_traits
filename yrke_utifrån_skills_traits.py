@@ -34,6 +34,7 @@ def matcha_mot_yrken_och_visa_tio(selected, typ):
         yrken_med_värden[key] = värde
     yrken_med_värden = dict(sorted(yrken_med_värden.items(), key = lambda x:x[1], reverse = True))
     yrken_med_värden = dict(itertools.islice(yrken_med_värden.items(), 10))
+    yrken_med_värden = {k: v for k, v in yrken_med_värden.items() if v}
     st.write(yrken_med_värden)
 
 def välj_skills():
